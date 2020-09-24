@@ -6931,7 +6931,7 @@ div.wave-block:nth-child(17):after {
   transition: 0.4s;
 }
 .nav-list-repair {
-  min-width: 390px;
+  min-width: 256px;
   display: block;
 }
 @media (max-width: 1024px) {

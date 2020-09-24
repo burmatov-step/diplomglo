@@ -101,7 +101,7 @@ const repairTypes = () => {
     slidesToShow: 3,
     next: "#nav-arrow-repair-right_base",
     prev: "#nav-arrow-repair-left_base",
-    infinity: true,
+    infinity: false,
     removes: true,
     responsive: [
       {

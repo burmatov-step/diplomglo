@@ -5,6 +5,7 @@ import toggleMenu from "./modules/toggleMenu";
 import feedback from "./modules/feedback";
 import formula from "./modules/formula";
 import repairTypes from "./modules/repairTypes.js";
+import portfolio from "./modules/portfolio.js";
 
 toggleMenu();
 
@@ -15,7 +16,9 @@ feedback();
 formula();
 
 // Виды работы
-
-
 repairTypes();
+
+// Портфолио
+
+portfolio();
 
