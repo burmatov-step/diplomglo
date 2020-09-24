@@ -6,6 +6,7 @@ class SliderCarusel {
     wrap,
     next,
     prev,
+    removes = false,
     infinity = false,
     position = 0,
     slidesToShow = 3,
@@ -23,6 +24,7 @@ class SliderCarusel {
     this.options = {
       position,
       infinity,
+      removes,
       maxPosition: this.slides.length - this.slidesToShow,
       widthSlide: Math.floor(100 / this.slidesToShow),
     };
@@ -52,6 +54,16 @@ class SliderCarusel {
     }
   }
 
+  removeClasses(){
+    if (this.options.removes) {
+      this.main.classList.remove("glo-slider");
+      this.wrap.classList.remove("glo-slider__wrap");
+      for (const item of this.slides) {
+        item.classList.remove("glo-slider__item");
+      }
+    }
+  }
+
   addStyle() {
     let style = document.getElementById("sliderCarousel-style");
     if (!style) {
@@ -68,6 +80,7 @@ class SliderCarusel {
       transition: transform 0.5s !important;
       align-items: flex-start !important;
       will-change: transform !important;
+      flex-wrap: nowrap !important;
     }
     .glo-slider__item{
       display: flex !important;
@@ -171,7 +184,12 @@ class SliderCarusel {
 
     checkResponse();
 
-    window.addEventListener("resize", checkResponse);
+    window.addEventListener("resize", () =>{
+      checkResponse();
+      if (innerWidth >= 1024) {
+        this.removeClasses();
+      }
+    } );
   }
 }
 

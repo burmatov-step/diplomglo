@@ -12,6 +12,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
 }
@@ -1166,6 +1172,10 @@ template,
   cursor: pointer;
   z-index: 1;
 }
+
+.types-repairAll{
+  position: relative;
+}
 .formula-item__icon-inner {
   position: relative;
   display: -webkit-box;
@@ -1405,6 +1415,19 @@ template,
   background-position: 20px -120px;
   background-repeat: no-repeat;
   z-index: 0;
+}
+
+.repair-types-slider__slide{
+  position: absolute;
+  opacity: 0;
+}
+
+.d-none{
+  display: none;
+}
+
+.item-active-slider{
+  opacity: 1;
 }
 @media (max-width: 1024px) {
   .repair-types {
@@ -6877,6 +6900,10 @@ div.wave-block:nth-child(17):after {
     overflow-y: scroll;
   }
 }
+
+.button-list-repair{
+  margin-top: 22px;
+}
 .nav-popup-repair-types::-webkit-scrollbar {
   width: 8px;
 }
@@ -6908,8 +6935,11 @@ div.wave-block:nth-child(17):after {
   display: block;
 }
 @media (max-width: 1024px) {
+  .button-list-repair{
+    margin-top: 0;
+  }
   .nav-list-repair {
-    min-width: 1200px;
+    /* min-width: 1200px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6920,7 +6950,7 @@ div.wave-block:nth-child(17):after {
 }
 @media (max-width: 575px) {
   .nav-list-repair {
-    min-width: 1086px;
+    /* min-width: 1086px; */
   }
 }
 .nav-list-popup-repair {
