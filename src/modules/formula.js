@@ -7,7 +7,7 @@ const formula = () => {
     item.addEventListener("mouseover", () => {
       const info = item.querySelector(".formula-item-popup"),
         heightDown = item.nextElementSibling.clientHeight;
-      console.dir(item);
+
 
       if (info.getBoundingClientRect().top < 0) {
         item.parentElement.style.zIndex = "2";
@@ -16,12 +16,12 @@ const formula = () => {
         info.style.opacity = "1";
         info.style.top = `calc(110% + ${heightDown}px)`;
         info.classList.add("rotate-popup");
-        info.style.zIndex = "999";
-        formulaSliderSlide.style.opacity = "1";
+
       } else {
         item.parentElement.style.opacity = "1";
         info.style.visibility = "visible";
         info.style.opacity = "1";
+        item.parentElement.style.zIndex = "1";
       }
     });
     item.addEventListener("mouseout", () => {

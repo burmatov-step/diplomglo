@@ -1,4 +1,4 @@
-import SliderCarusel from "./sliderFormula.js";
+import SliderCaruselTab from "./sliderTabs.js";
 
 const repairTypes = () => {
   const slider = (i = 1) => {
@@ -14,14 +14,13 @@ const repairTypes = () => {
         ".slider-counter-content__total"
       );
 
-      if (!slide[0].classList.contains("item-active-slider")) {
-        slide[0].classList.add("item-active-slider");
-      }
+    if (!slide[0].classList.contains("item-active-slider")) {
+      slide[0].classList.add("item-active-slider");
+    }
 
-      for(let i = 1; i < slide.length; i++){
-       slide[i].classList.remove("item-active-slider");
-      }
-
+    for (let i = 1; i < slide.length; i++) {
+      slide[i].classList.remove("item-active-slider");
+    }
 
     let currentSlide = 0;
 
@@ -44,7 +43,7 @@ const repairTypes = () => {
         currentSlide++;
         nextSlide(slide, currentSlide, "item-active-slider");
       }
-       countSlider();
+      countSlider();
     });
 
     arrowLeft.addEventListener("click", () => {
@@ -54,13 +53,10 @@ const repairTypes = () => {
       }
       countSlider();
     });
-
-
-
   };
   slider();
 
-  const tabs = () =>{
+  const tabs = () => {
     const tabHeader = document.querySelector(".wrapper_middle"),
       tab = document.querySelectorAll(".repair-types-nav__item"),
       tabContent = document.querySelectorAll(".types-repairAll");
@@ -86,40 +82,28 @@ const repairTypes = () => {
             let num = i + 1;
             toggleTabContent(i);
 
-            slider(i+1);
+            slider(i + 1);
           }
         });
       }
     });
-  }
-
-  tabs()
-
-  const option = {
-    main: ".repair-types-nav",
-    wrap: ".nav-list-repair",
-    slidesToShow: 3,
-    next: "#nav-arrow-repair-right_base",
-    prev: "#nav-arrow-repair-left_base",
-    infinity: false,
-    removes: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        slideToShow: 3,
-      },
-      {
-        breakpoint: 768,
-        slideToShow: 2,
-      },
-      {
-        breakpoint: 576,
-        slideToShow: 1,
-      },
-    ],
   };
 
-  const carousel = new SliderCarusel(option);
+  tabs();
+
+  const option = {
+    main: ".nav-designs",
+    wrap: ".nav-list-repair",
+    next: "#nav-arrow-repair-right_base",
+    prev: "#nav-arrow-repair-left_base",
+    removes: false,
+    width: 0,
+    padding: 20,
+    position: 0,
+    addap: 0
+  };
+
+  const carousel = new SliderCaruselTab(option);
 
   if (innerWidth >= 1024) {
     window.addEventListener("resize", () => {
@@ -132,8 +116,6 @@ const repairTypes = () => {
   } else {
     carousel.init();
   }
-
-
 };
 
 export default repairTypes;

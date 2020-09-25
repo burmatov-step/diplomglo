@@ -68,7 +68,7 @@ class SliderCarusel {
     let style = document.getElementById("sliderCarousel-style");
     if (!style) {
       style = document.createElement("style");
-      style.id = "sliderCarousel-style";
+      style.id =  "sliderCarousel-style";
     }
 
     style.textContent = `
@@ -172,7 +172,7 @@ class SliderCarusel {
           if (widthWindow < allRespone[i]) {
             this.slidesToShow = this.responsive[i].slideToShow;
             this.options.widthSlide = Math.floor(100 / this.slidesToShow);
-            this.options.maxPosition = this.slides.length - this.slidesToShow
+            this.options.maxPosition = this.slides.length - this.slidesToShow;
             this.addStyle();
           }
         }
