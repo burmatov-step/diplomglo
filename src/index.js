@@ -11,6 +11,7 @@ import design from "./modules/design.js";
 import documents from "./modules/documents.js";
 import reviews from "./modules/reviews.js";
 import partners from "./modules/partners.js";
+import problems from "./modules/problems.js";
 
 toggleMenu();
 
@@ -40,6 +41,10 @@ reviews();
 // партнеры
 
 partners();
+
+// проблемы
+
+problems();
 
 
 
