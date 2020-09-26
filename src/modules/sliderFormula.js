@@ -6,10 +6,13 @@ class SliderCarusel {
     wrap,
     next,
     prev,
+    idStyle,
+    deletes,
     removes = false,
     infinity = false,
     position = 0,
     slidesToShow = 3,
+    indexx = 1,
     responsive = [],
   }) {
     if (!main || !wrap) {
@@ -22,9 +25,12 @@ class SliderCarusel {
     this.prev = document.querySelector(prev);
     this.slidesToShow = slidesToShow;
     this.options = {
+      idStyle,
       position,
+      deletes,
       infinity,
       removes,
+      indexx,
       maxPosition: this.slides.length - this.slidesToShow,
       widthSlide: Math.floor(100 / this.slidesToShow),
     };
@@ -47,42 +53,43 @@ class SliderCarusel {
   }
 
   addGloClass() {
-    this.main.classList.add("glo-slider");
-    this.wrap.classList.add("glo-slider__wrap");
+    this.main.classList.add(`glo-slider-${this.options.indexx}`);
+    this.wrap.classList.add(`glo-slider__wrap-${this.options.indexx}`);
     for (const item of this.slides) {
-      item.classList.add("glo-slider__item");
+      item.classList.add(`glo-slider__item-${this.options.indexx}`);
     }
   }
 
-  removeClasses(){
+  removeClasses() {
     if (this.options.removes) {
-      this.main.classList.remove("glo-slider");
-      this.wrap.classList.remove("glo-slider__wrap");
+      console.log(222)
+      this.main.classList.remove(`glo-slider-${this.options.indexx}`);
+      this.wrap.classList.remove(`glo-slider__wrap-${this.options.indexx}`);
       for (const item of this.slides) {
-        item.classList.remove("glo-slider__item");
+        item.classList.remove(`glo-slider__item-${this.options.indexx}`);
       }
     }
   }
 
   addStyle() {
-    let style = document.getElementById("sliderCarousel-style");
+    let style = document.getElementById(this.options.idStyle);
     if (!style) {
       style = document.createElement("style");
-      style.id =  "sliderCarousel-style";
+      style.id = this.options.idStyle;
     }
 
     style.textContent = `
-    .glo-slider{
+    .glo-slider-${this.options.indexx}{
       overflow: hidden !important;
     }
-    .glo-slider__wrap{
+    .glo-slider__wrap-${this.options.indexx}{
       display: flex !important;
       transition: transform 0.5s !important;
       align-items: flex-start !important;
       will-change: transform !important;
       flex-wrap: nowrap !important;
     }
-    .glo-slider__item{
+    .glo-slider__item-${this.options.indexx}{
       display: flex !important;
       align-items: center !important;
       justify-content: center;
@@ -185,12 +192,12 @@ class SliderCarusel {
 
     checkResponse();
 
-    window.addEventListener("resize", () =>{
+    window.addEventListener("resize", () => {
       checkResponse();
-      if (innerWidth >= 1024) {
+      if (innerWidth >= this.options.deletes) {
         this.removeClasses();
       }
-    } );
+    });
   }
 }
 

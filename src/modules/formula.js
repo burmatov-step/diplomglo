@@ -46,6 +46,9 @@ const formula = () => {
     next: ".slider-arrow_right-formula.slider-arrow_right",
     prev: ".slider-arrow_left-formula.slider-arrow_left",
     infinity: true,
+    idStyle: "sliderCarousel-style",
+    deletes: 1024,
+    indexx: 1,
     responsive: [
       {
         breakpoint: 1024,

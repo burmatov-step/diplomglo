@@ -8,6 +8,9 @@ import repairTypes from "./modules/repairTypes.js";
 import portfolio from "./modules/portfolio.js";
 import SliderCaruselTab from "./modules/sliderTabs.js";
 import design from "./modules/design.js";
+import documents from "./modules/documents.js";
+import reviews from "./modules/reviews.js";
+import partners from "./modules/partners.js";
 
 toggleMenu();
 
@@ -24,8 +27,21 @@ repairTypes();
 
 portfolio();
 
+// документы
+documents()
 
+// дизайн
 design();
+
+
+// отзывы
+reviews();
+
+// партнеры
+
+partners();
+
+
 
 
 // const portfolioSlide = document.getElementById("portfolio"),

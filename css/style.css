@@ -2142,6 +2142,14 @@ div.wave-block:nth-child(17):after {
 .portfolio-slider__slide-frame {
   position: relative;
 }
+.popup-transparency-slider__slide{
+position: absolute;
+opacity: 0;
+}
+
+.popup-transparency-slider__slide.item-active-slider{
+  opacity: 1;
+}
 
 .portfolio-slider__slide-frame.item-active-slider {
 
@@ -3998,7 +4006,7 @@ div.wave-block:nth-child(17):after {
 }
 .reviews-slider {
   height: 314px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .reviews-slider-wrap {
   position: relative;
@@ -7785,6 +7793,7 @@ opacity: 1;
 .active-item .formula-item__icon-inner__descr {
   font-size: 20px;
 }
+
 .active-item .formula-item__icon-inner {
   color: #ffffff;
   background: -webkit-gradient(
