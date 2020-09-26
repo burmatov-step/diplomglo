@@ -5874,6 +5874,28 @@ div.wave-block:nth-child(17):after {
     height: auto;
   }
 }
+
+.design-tab-all,
+.popup-design-all {
+  position: relative;
+}
+
+.popup-design-all {
+ min-height: 100%;
+}
+
+.designs-slider__style-slide,
+.popup-design-slider__style-slide {
+  position: absolute;
+  opacity: 0;
+}
+.item-active-slider.designs-slider__style-slide,
+.popup-design-slider__style-slide.item-active-slider {
+opacity: 1;
+}
+
+
+
 .popup-dialog-portfolio >.row {
   height: 100%;
 }
@@ -6305,6 +6327,7 @@ div.wave-block:nth-child(17):after {
 }
 .popup-design-slider {
   position: relative;
+  min-height: 100%;
   margin-top: 0;
   border-radius: 0 20px 0 0;
   overflow: hidden;

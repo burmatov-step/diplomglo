@@ -3,3 +3,9 @@
 [0924/183925.124:ERROR:process_info.cc(359)] UncheckedAllocate
 [0925/164518.324:ERROR:process_info.cc(359)] UncheckedAllocate
 [0925/175442.041:ERROR:process_info.cc(359)] UncheckedAllocate
+[0925/181307.976:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0925/181307.992:ERROR:exception_snapshot_win.cc(99)] thread ID 5216 not found in process
+[0925/181308.008:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0925/181308.008:ERROR:exception_snapshot_win.cc(99)] thread ID 4804 not found in process
+[0925/181308.133:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0925/181308.133:ERROR:exception_snapshot_win.cc(99)] thread ID 13996 not found in process

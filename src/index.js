@@ -7,6 +7,7 @@ import formula from "./modules/formula";
 import repairTypes from "./modules/repairTypes.js";
 import portfolio from "./modules/portfolio.js";
 import SliderCaruselTab from "./modules/sliderTabs.js";
+import design from "./modules/design.js";
 
 toggleMenu();
 
@@ -24,20 +25,7 @@ repairTypes();
 portfolio();
 
 
-const option = {
-  main: ".nav-designs",
-  wrap: "#designs-list",
-  next: "#nav-arrow-designs_right",
-  prev: "#nav-arrow-designs_left",
-  removes: true,
-  width: 0,
-  position: 0,
-  padding: 17,
-  addap: 0,
-};
-
-const carousel = new SliderCaruselTab(option);
-carousel.init();
+design();
 
 
 // const portfolioSlide = document.getElementById("portfolio"),
