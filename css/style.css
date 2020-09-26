@@ -7761,6 +7761,10 @@ opacity: 1;
   font-size: 20px;
   opacity: 1;
 }
+
+.popup-dialog-menu.open-menu-popup {
+  transform: translate3d(0, 0, 0);
+}
 .active-item .formula-item__icon {
   width: 80px;
   height: 80px;

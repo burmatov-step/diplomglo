@@ -12,6 +12,8 @@ const toggleMenu = () => {
     popupRepairTypes = document.querySelector(".popup-repair-types"),
     popupMenu = document.querySelector(".popup-menu");
 
+    let first = 645;
+    let second = 0;
   // Добавление номера
   const addNumber = () => {
     headPhoneNumAccordLink.style.opacity = "1";
@@ -35,7 +37,18 @@ const toggleMenu = () => {
     });
   };
 
+
+
+  // window.addEventListener('resize', () =>{
+  //   if (innerWidth <= 575) {
+  //   first = 0;
+  //   second = 100;
+  // }
+
+  // })
+
   document.body.addEventListener("click", (e) => {
+
     const target = e.target;
 
     // При клике на стрелку выезжает и уезжает номер
@@ -49,12 +62,15 @@ const toggleMenu = () => {
     // при клике на меню, выезжает меню
     if (target === menuIcon) {
       popupMenu.style.visibility = "visible";
-      popupDialogMenu.style.transform = "translate3d(0,0,0)";
+      popupDialogMenu.classList.add("open-menu-popup");
+      popupMenu.style.opacity = "1";
     }
-    console.log(target.closest(".close-menu"));
+
     if (target.closest(".close-menu")) {
       popupMenu.style.visibility = "hidden";
-      popupDialogMenu.style.transform = "translate3d(645px,0,0)";
+      popupDialogMenu.classList.remove("open-menu-popup");
+      popupMenu.style.opacity = "0";
+      popupMenu.style.transition = '1s'
     }
     if (
       target.closest(".popup-menu-nav__item") ||
@@ -63,7 +79,9 @@ const toggleMenu = () => {
     ) {
       // закрытие меню при клике на ссылки в меню
       e.preventDefault();
-      popupDialogMenu.style.transform = "translate3d(645px,0,0)";
+      popupDialogMenu.classList.remove("open-menu-popup");
+      popupMenu.style.opacity = "0";
+
     }
     // плавный скролл
     blockSections.forEach((item) => {
