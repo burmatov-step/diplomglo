@@ -9,7 +9,8 @@ const toggleMenu = () => {
     menuIcon = document.querySelector(".menu__icon"),
     popupDialogMenu = document.querySelector(".popup-dialog-menu"),
     blockSections = document.querySelectorAll(".block-sections"),
-    popupRepairTypes = document.querySelector(".popup-repair-types");
+    popupRepairTypes = document.querySelector(".popup-repair-types"),
+    popupMenu = document.querySelector(".popup-menu");
 
   // Добавление номера
   const addNumber = () => {
@@ -47,15 +48,20 @@ const toggleMenu = () => {
 
     // при клике на меню, выезжает меню
     if (target === menuIcon) {
+      popupMenu.style.visibility = "visible";
       popupDialogMenu.style.transform = "translate3d(0,0,0)";
     }
-
-    // закрытие меню при клике на ссылки в меню
+    console.log(target.closest(".close-menu"));
+    if (target.closest(".close-menu")) {
+      popupMenu.style.visibility = "hidden";
+      popupDialogMenu.style.transform = "translate3d(645px,0,0)";
+    }
     if (
       target.closest(".popup-menu-nav__item") ||
       target.closest(".link-list-menu") ||
       target.closest(".button-footer")
     ) {
+      // закрытие меню при клике на ссылки в меню
       e.preventDefault();
       popupDialogMenu.style.transform = "translate3d(645px,0,0)";
     }

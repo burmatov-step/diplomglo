@@ -12,6 +12,8 @@ import documents from "./modules/documents.js";
 import reviews from "./modules/reviews.js";
 import partners from "./modules/partners.js";
 import problems from "./modules/problems.js";
+import scheme from "./modules/scheme.js";
+import accordion from "./modules/accordion.js";
 
 toggleMenu();
 
@@ -46,6 +48,13 @@ partners();
 
 problems();
 
+// как мы работаем
+
+scheme()
+
+// аккордион
+
+accordion();
 
 
 

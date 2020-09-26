@@ -5,7 +5,11 @@ const feedback = () => {
     formAll = document.querySelectorAll("form"),
     linkPrivacy = document.querySelectorAll(".link-privacy"),
     popupPrivacy = document.querySelector(".popup-privacy"),
-    close = popupPrivacy.querySelector(".close");
+    close = popupPrivacy.querySelector(".close"),
+    buttonHide = document.querySelectorAll(".button.button_wide"),
+    popupConsultation = document.querySelector(".popup-consultation");
+
+    console.log(buttonHide);
 
   feedbackPhone.forEach((e) => {
     maskPhone(e);
@@ -31,6 +35,20 @@ const feedback = () => {
   close.addEventListener("click", () => {
     popupPrivacy.style.visibility = "hidden";
   });
+
+  document.body.addEventListener('click', (e) =>{
+    let target = e.target;
+
+    if(target.closest('.button.button_wide')){
+      popupConsultation.style.visibility = "visible";
+    }
+
+    if (target.closest(".close-consultation")) {
+      popupConsultation.style.visibility = "hidden";
+    }
+  })
+
+
 
   formAll.forEach((item) => {
     // обработчик на форму
