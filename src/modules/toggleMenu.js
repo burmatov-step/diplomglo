@@ -54,6 +54,7 @@ const toggleMenu = () => {
 
     if (target.closest(".close")){
       popupRepairTypes.style.visibility = "hidden";
+      document.documentElement.classList.remove("overflov");
     }
       if (target.closest(".header-contacts__arrow")) {
         // При клике на стрелку выезжает и уезжает номер
@@ -98,6 +99,8 @@ const toggleMenu = () => {
     if (target.closest(".link-list")) {
       e.preventDefault();
       popupRepairTypes.style.visibility = "visible";
+      document.documentElement.classList.add("overflov");
+
     }
   });
 };

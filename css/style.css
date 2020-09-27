@@ -8240,6 +8240,11 @@ strong {
     padding-right: 0;
   }
 }
+
+.overflov{
+  overflow: hidden;
+}
+
 .wrapper_feedback {
   position: relative;
   display: -webkit-box;
