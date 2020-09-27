@@ -7,6 +7,7 @@ const formula = () => {
     item.addEventListener("mouseover", () => {
       const info = item.querySelector(".formula-item-popup"),
         heightDown = item.nextElementSibling.clientHeight;
+        item.classList.add("active-item");
 
 
       if (info.getBoundingClientRect().top < 0) {
@@ -26,6 +27,7 @@ const formula = () => {
     });
     item.addEventListener("mouseout", () => {
       const info = item.querySelector(".formula-item-popup");
+      item.classList.remove("active-item");
       info.style.visibility = "hidden";
       info.style.opacity = "0";
       info.style.top = "";

@@ -8,7 +8,7 @@ const problems = () =>{
     item.addEventListener("mouseover", () => {
       const info = item.querySelector(".problems-item-popup"),
         heightDown = item.nextElementSibling.clientHeight;
-      item.parentElement.classList.add("active-item");
+      item.classList.add("active-item");
       // console.dir(parentElement);
 
       if (info.getBoundingClientRect().top < 0) {
@@ -26,7 +26,7 @@ const problems = () =>{
       }
     });
     item.addEventListener("mouseout", () => {
-      item.parentElement.classList.remove("active-item");
+      item.classList.remove("active-item");
       const info = item.querySelector(".problems-item-popup");
       info.style.visibility = "hidden";
       info.style.opacity = "0";
