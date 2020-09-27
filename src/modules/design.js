@@ -221,7 +221,7 @@ const design = () =>{
     };
 
     const carouselPop = new SliderCaruselTab(optionPop);
-    // carouselPop.init();
+    carouselPop.init();
 
     //popup слайдер
 

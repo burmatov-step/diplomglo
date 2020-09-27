@@ -12,10 +12,6 @@ const option = {
   indexx: 4,
   responsive: [
     {
-      breakpoint: 1024,
-      slideToShow: 3,
-    },
-    {
       breakpoint: 768,
       slideToShow: 2,
     },

@@ -14,12 +14,12 @@ const option = {
   idStyle: "sliderCarousel-styles",
   deletes: 1091,
   indexx: 2,
-  responsive: [
-    {
-      breakpoint: 1091,
-      slideToShow: 1,
-    },
-  ],
+  // responsive: [
+  //   {
+  //     breakpoint: 1091,
+  //     slideToShow: 1,
+  //   },
+  // ],
 };
 
 const carousel = new SliderCarusel(option);
@@ -37,14 +37,14 @@ if (target.closest(".popup-transparency .close")) {
   docPopup.style.visibility = "hidden";
 }
 })
-window.addEventListener("resize", (e) => {
+// window.addEventListener("resize", (e) => {
 
-  if (innerWidth < 1091) {
-    carousel.init();
-  }
+//   if (innerWidth < 1091) {
+//     carousel.init();
+//   }
 
 
-});
+// });
 
 const slider = (i = 1) => {
   let slide = document.querySelectorAll(`.popup-transparency-slider__slide`),

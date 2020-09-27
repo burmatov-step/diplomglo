@@ -12,7 +12,7 @@ const toggleMenu = () => {
     popupRepairTypes = document.querySelector(".popup-repair-types"),
     popupMenu = document.querySelector(".popup-menu");
 
-
+    popupMenu.style.opacity = "0";
     let first = 645;
     let second = 0;
   // Добавление номера
@@ -86,6 +86,7 @@ const toggleMenu = () => {
       e.preventDefault();
       popupDialogMenu.classList.remove("open-menu-popup");
       popupMenu.style.opacity = "0";
+      popupMenu.style.visibility = "hidden";
 
     }
     // плавный скролл
