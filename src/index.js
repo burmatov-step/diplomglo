@@ -1,12 +1,20 @@
 "use strict";
 
+import "@babel/polyfill";
+import "nodelist-foreach-polyfill";
+import elementClosest from 'element-closest'
+elementClosest(window);
+import "formdata-polyfill";
+import "es6-promise";
+import "fetch-polyfill";
+import smoothscroll from "smoothscroll-polyfill";
+smoothscroll.polyfill();
 
 import toggleMenu from "./modules/toggleMenu";
 import feedback from "./modules/feedback";
 import formula from "./modules/formula";
 import repairTypes from "./modules/repairTypes.js";
 import portfolio from "./modules/portfolio.js";
-import SliderCaruselTab from "./modules/sliderTabs.js";
 import design from "./modules/design.js";
 import documents from "./modules/documents.js";
 import reviews from "./modules/reviews.js";
