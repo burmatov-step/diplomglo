@@ -7041,7 +7041,7 @@ opacity: 1;
 }
 @media (max-width: 575px) {
   .nav-list-repair {
-    /* min-width: 1086px; */
+    min-width: 1050px;
   }
 }
 .nav-list-popup-repair {

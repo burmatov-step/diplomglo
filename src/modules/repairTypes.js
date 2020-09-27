@@ -98,7 +98,7 @@ const repairTypes = () => {
     prev: "#nav-arrow-repair-left_base",
     removes: false,
     width: 0,
-    padding: 20,
+    padding: 10,
     position: 0,
     addap: 0
   };

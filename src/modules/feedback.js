@@ -78,6 +78,15 @@ const feedback = () => {
           .catch((error) => {
             console.log(error);
           });
+      } else{
+        const errorMess = document.createElement('div');
+        errorMess.style.fontSize = "14px";
+        errorMess.textContent = 'Дайте согласие на обработку данных';
+        errorMess.style.color = 'red'
+        item.appendChild(errorMess)
+        setTimeout(() => {
+          item.removeChild(errorMess);
+        }, 1000);
       }
     });
   });
