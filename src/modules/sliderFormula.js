@@ -191,6 +191,14 @@ class SliderCarusel {
     };
 
     checkResponse();
+     if (innerWidth >= this.options.deletes) {
+       this.wrap.style.transform = `translateX(0%)`;
+       this.options.position = 0;
+       this.removeClasses();
+     } else {
+       this.addGloClass();
+     }
+
 
     window.addEventListener("resize", () => {
       checkResponse();

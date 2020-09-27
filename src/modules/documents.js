@@ -23,9 +23,9 @@ const option = {
 };
 
 const carousel = new SliderCarusel(option);
-if (innerWidth < 1091) {
+
   carousel.init();
-}
+
 
 document.body.addEventListener('click', (e) =>{
    let target = e.target;
