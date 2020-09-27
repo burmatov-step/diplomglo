@@ -12,6 +12,7 @@ const toggleMenu = () => {
     popupRepairTypes = document.querySelector(".popup-repair-types"),
     popupMenu = document.querySelector(".popup-menu");
 
+
     let first = 645;
     let second = 0;
   // Добавление номера
@@ -51,13 +52,16 @@ const toggleMenu = () => {
 
     const target = e.target;
 
-    // При клике на стрелку выезжает и уезжает номер
-    if (target.closest(".header-contacts__arrow")) {
-      headerContactsArrow.classList.toggle("active");
-      headerContactsArrow.classList.contains("active")
-        ? addNumber()
-        : delNumber();
+    if (target.closest(".close")){
+      popupRepairTypes.style.visibility = "hidden";
     }
+      if (target.closest(".header-contacts__arrow")) {
+        // При клике на стрелку выезжает и уезжает номер
+        headerContactsArrow.classList.toggle("active");
+        headerContactsArrow.classList.contains("active")
+          ? addNumber()
+          : delNumber();
+      }
 
     // при клике на меню, выезжает меню
     if (target === menuIcon) {

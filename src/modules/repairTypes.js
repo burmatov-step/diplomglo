@@ -60,7 +60,7 @@ const repairTypes = () => {
     const tabHeader = document.querySelector(".wrapper_middle"),
       tab = document.querySelectorAll(".repair-types-nav__item"),
       tabContent = document.querySelectorAll(".types-repairAll");
-    console.log(tab);
+
     const toggleTabContent = (index) => {
       for (let i = 0; i < tabContent.length; i++) {
         if (index === i) {

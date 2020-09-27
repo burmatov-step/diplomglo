@@ -7,9 +7,9 @@ const feedback = () => {
     popupPrivacy = document.querySelector(".popup-privacy"),
     close = popupPrivacy.querySelector(".close"),
     buttonHide = document.querySelectorAll(".button.button_wide"),
-    popupConsultation = document.querySelector(".popup-consultation");
+    popupConsultation = document.querySelector(".popup-consultation"),
+    popupThank = document.querySelector(".popup-thank");
 
-    console.log(buttonHide);
 
   feedbackPhone.forEach((e) => {
     maskPhone(e);
@@ -46,6 +46,10 @@ const feedback = () => {
     if (target.closest(".close-consultation")) {
       popupConsultation.style.visibility = "hidden";
     }
+
+    if (target.closest(".close-thank")) {
+      popupThank.style.visibility = "hidden";
+    }
   })
 
 
@@ -55,6 +59,9 @@ const feedback = () => {
     item.addEventListener("submit", (e) => {
       e.preventDefault();
       const check = e.target.querySelector("[type='checkbox']");
+      const succs = () => {
+        popupThank.style.visibility = 'visible';
+      };
       if (check.checked) {
         const formData = new FormData(item);
         let body = {};
@@ -66,6 +73,7 @@ const feedback = () => {
             if (response.status !== 200) {
               throw new Error("status network not 200");
             }
+            succs();
           })
           .catch((error) => {
             console.log(error);

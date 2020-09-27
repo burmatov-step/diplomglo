@@ -193,7 +193,6 @@ const design = () =>{
         let target = event.target;
 
        let targetb = target.closest("#nav-list-popup-designs > button");
-        // console.log(targetb);
         if (targetb) {
           tabPop.forEach((item, i) => {
             if (item === targetb) {

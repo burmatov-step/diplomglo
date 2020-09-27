@@ -62,7 +62,7 @@ class SliderCarusel {
 
   removeClasses() {
     if (this.options.removes) {
-      console.log(222)
+
       this.main.classList.remove(`glo-slider-${this.options.indexx}`);
       this.wrap.classList.remove(`glo-slider__wrap-${this.options.indexx}`);
       for (const item of this.slides) {

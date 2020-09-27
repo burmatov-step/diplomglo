@@ -24,7 +24,7 @@ const scheme = () =>{
        tab = document.querySelectorAll(".scheme-nav__item"),
        tabContent = document.querySelectorAll(".scheme-slider__slide"),
        tabContentText = document.querySelectorAll(".scheme-description-block");
-     console.log(tab);
+
      const toggleTabContent = (index) => {
        for (let i = 0; i < tabContent.length; i++) {
          if (index === i) {

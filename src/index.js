@@ -14,6 +14,7 @@ import partners from "./modules/partners.js";
 import problems from "./modules/problems.js";
 import scheme from "./modules/scheme.js";
 import accordion from "./modules/accordion.js";
+import repairPopup from "./modules/repairPopup.js";
 
 toggleMenu();
 
@@ -55,6 +56,10 @@ scheme()
 // аккордион
 
 accordion();
+
+// подгрузка из db
+
+repairPopup();
 
 
 

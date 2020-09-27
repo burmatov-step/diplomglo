@@ -34,7 +34,7 @@ class SliderCaruselTab {
     this.render();
 
     // console.dir(this.slides[this.slides.length - 1].clientWidth);
-    console.dir(this.wrap);
+    // console.dir(this.wrap);
     if (this.prev && this.next) {
       this.constolSlider();
     } else {
@@ -65,8 +65,8 @@ render(){
   }
 
   constolSlider() {
-    console.log(this.prev);
-    console.log(this.next);
+    // console.log(this.prev);
+    // console.log(this.next);
     this.prev.addEventListener("click", this.prevSlider.bind(this));
     this.next.addEventListener("click", this.nextSlider.bind(this));
   }
@@ -98,12 +98,12 @@ render(){
     if (this.options.position < Math.round(widthwr) - this.options.addap) {
       this.options.width -=
         (this.slides[this.options.position].offsetWidth + this.options.padding);
-        console.log(this.options.width);
+        // console.log(this.options.width);
       this.wrap.style.transform = `translateX(${this.options.width}px)`;
       this.options.position++;
     }
-    console.log(this.options.position + Math.round(widthwr));
-    console.log(this.slides.length );
+    // console.log(this.options.position + Math.round(widthwr));
+    // console.log(this.slides.length );
     if (
       this.options.removes &&
       this.options.position === Math.round(widthwr) - this.options.addap

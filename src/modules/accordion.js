@@ -16,7 +16,7 @@ const accordion = () => {
     });
 
 
-  console.log(li);
+
 };
 
 export default accordion;

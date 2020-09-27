@@ -14,7 +14,6 @@ const portfolio = () =>{
       sliderCounterTotal = document.querySelector(
         "#portfolio-counter > .slider-counter-content > .slider-counter-content__total"
       );
-      console.log(sliderCounterTotal);
 
     if (!slide[0].classList.contains("item-active-slider")) {
       slide[0].classList.add("item-active-slider");
@@ -117,7 +116,7 @@ const sliderPop = () => {
       "#popup-portfolio-counter> .slider-counter-content > .slider-counter-content__total"
     ),
      popText = document.querySelectorAll(".popup-portfolio-text");
-  console.log(sliderCounterTotal);
+
 
   if (!slide[0].classList.contains("item-active-slider")) {
     slide[0].classList.add("item-active-slider");
@@ -179,9 +178,6 @@ const sliderPop = () => {
 };
 sliderPop()
 
-
-// popText[2].style.display = 'block'
-console.log();
 
 }
 
