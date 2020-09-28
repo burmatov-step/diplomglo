@@ -38,16 +38,6 @@ const toggleMenu = () => {
     });
   };
 
-
-
-  // window.addEventListener('resize', () =>{
-  //   if (innerWidth <= 575) {
-  //   first = 0;
-  //   second = 100;
-  // }
-
-  // })
-
   document.body.addEventListener("click", (e) => {
 
     const target = e.target;

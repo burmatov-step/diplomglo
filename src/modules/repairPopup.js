@@ -1,3 +1,5 @@
+import SliderCaruselTab from "./sliderTabs.js";
+
 const repairPopup = () => {
   const listRepair = document.querySelector(".nav-list-popup-repair"),
     repairTitle = document.querySelector(
@@ -115,6 +117,21 @@ const repairPopup = () => {
            console.log(error);
          });
     })
+
+      const option = {
+        main: ".nav-wrap-repair",
+        wrap: ".nav-list-popup-repair",
+        next: "#nav-arrow-popup-repair_right",
+        prev: "#nav-arrow-popup-repair_left",
+        removes: false,
+        width: 0,
+        padding: 10,
+        position: 0,
+        addap: 0,
+      };
+
+      const carousel = new SliderCaruselTab(option);
+      carousel.init()
 };
 
 export default repairPopup;

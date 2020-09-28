@@ -7051,7 +7051,7 @@ opacity: 1;
 }
 @media (max-width: 1024px) {
   .nav-list-popup-repair {
-    min-width: 3130px;
+    min-width: 1900px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
