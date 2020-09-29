@@ -106,17 +106,19 @@ const repairTypes = () => {
 
   const carousel = new SliderCaruselTab(option);
 
-  if (innerWidth > 1024) {
-    window.addEventListener("resize", () => {
-      if (innerWidth <= 1024) {
-        carousel.init();
-      } else{
+  carousel.init();
 
-      }
-    });
-  } else {
-    carousel.init();
-  }
+  // if (innerWidth > 1024) {
+  //   window.addEventListener("resize", () => {
+  //     if (innerWidth <= 1024) {
+  //       carousel.init();
+  //     } else{
+
+  //     }
+  //   });
+  // } else {
+  //   carousel.init();
+  // }
 };
 
 export default repairTypes;
