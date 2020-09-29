@@ -44,7 +44,7 @@ const formula = () => {
   const option = {
     main: ".formula-slider-wrap",
     wrap: ".formula-slider",
-    slidesToShow: 3,
+    slidesToShow: 1,
     next: ".slider-arrow_right-formula.slider-arrow_right",
     prev: ".slider-arrow_left-formula.slider-arrow_left",
     infinity: true,
@@ -54,30 +54,27 @@ const formula = () => {
     responsive: [
       {
         breakpoint: 1025,
-        slideToShow: 1,
+        slideToShow: 3,
       },
       {
         breakpoint: 769,
-        slideToShow: 1,
-      },
-      {
-        breakpoint: 576,
         slideToShow: 1,
       },
     ],
   };
 
   const carousel = new SliderCarusel(option);
+  carousel.init();
 
-  if (innerWidth >= 1025) {
-    window.addEventListener("resize", () => {
-      if (innerWidth < 1025) {
-        carousel.init();
-      }
-    });
-  } else {
-    carousel.init();
-  }
+  // if (innerWidth >= 1025) {
+  //   window.addEventListener("resize", () => {
+  //     if (innerWidth < 1025) {
+  //       carousel.init();
+  //     }
+  //   });
+  // } else {
+  //   carousel.init();
+  // }
 };
 
 export default formula;
