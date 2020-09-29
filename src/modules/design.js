@@ -41,6 +41,7 @@ const design = () =>{
 
       if (target.closest(".link-list-designs")) {
         popupDesign.style.visibility = 'visible';
+        document.documentElement.classList.add("overflov");
       }
 
       if (target.closest(".popup-design .close")){
@@ -169,10 +170,7 @@ const design = () =>{
         );
 
 
-        // const countSlider = () => {
-        //   sliderCounter.textContent = currentSlide + 1;
-        // };
-        // countSlider();
+
 
       const toggleTabContent = (index) => {
         for (let i = 0; i < tabContentPop.length; i++) {

@@ -44,7 +44,7 @@ const formula = () => {
   const option = {
     main: ".formula-slider-wrap",
     wrap: ".formula-slider",
-    slidesToShow: 4,
+    slidesToShow: 3,
     next: ".slider-arrow_right-formula.slider-arrow_right",
     prev: ".slider-arrow_left-formula.slider-arrow_left",
     infinity: true,
@@ -53,12 +53,12 @@ const formula = () => {
     indexx: 1,
     responsive: [
       {
-        breakpoint: 1024,
-        slideToShow: 3,
+        breakpoint: 1025,
+        slideToShow: 1,
       },
       {
-        breakpoint: 768,
-        slideToShow: 2,
+        breakpoint: 769,
+        slideToShow: 1,
       },
       {
         breakpoint: 576,

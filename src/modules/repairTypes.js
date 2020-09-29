@@ -92,7 +92,7 @@ const repairTypes = () => {
   tabs();
 
   const option = {
-    main: ".nav-designs",
+    main: ".nav-wrap-repair",
     wrap: ".nav-list-repair",
     next: "#nav-arrow-repair-right_base",
     prev: "#nav-arrow-repair-left_base",
@@ -100,14 +100,15 @@ const repairTypes = () => {
     width: 0,
     padding: 10,
     position: 0,
-    addap: 0
+    addap: -1,
+    addap2: -1,
   };
 
   const carousel = new SliderCaruselTab(option);
 
-  if (innerWidth >= 1024) {
+  if (innerWidth > 1024) {
     window.addEventListener("resize", () => {
-      if (innerWidth <= 1025) {
+      if (innerWidth <= 1024) {
         carousel.init();
       } else{
 

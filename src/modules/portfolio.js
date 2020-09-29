@@ -93,6 +93,7 @@ document.body.addEventListener('click', (e) =>{
  let target = e.target;
    if (target.closest(".portfolio-slider__slide-frame")) {
      popupPortfolio.style.visibility = "visible";
+     document.documentElement.classList.add("overflov");
    }
    if (
      target.closest(".popup-portfolio-slider-wrap > .close") ||

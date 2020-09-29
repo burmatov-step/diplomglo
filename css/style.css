@@ -2103,6 +2103,14 @@ div.wave-block:nth-child(17):after {
     width: 92%;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* .portfolio-slider, */
+  .portfolio-slider__wrapper {
+    width: 82%;
+  }
+}
 @media (max-width: 575px) {
   .portfolio-slider,
   .portfolio-slider__wrapper,
@@ -4539,6 +4547,8 @@ opacity: 0;
   }
 }
 .partners-slider {
+      max-width: 1200px;
+      width: 100%;
   margin-top: 83px;
   -webkit-transition: 1s;
   transition: 1s;
@@ -5202,13 +5212,13 @@ opacity: 0;
     font-size: 18px;
   }
 }
-.popup-repair-types-nav__item {
+.popup-repair-types-nav__item.button_o {
   width: 305px;
   height: 38px;
   margin-top: 22px;
   text-align: left;
   padding-left: 22px;
-  border: 3px solid #eeebe5 !important;
+  border: 3px solid #eeebe5;
   border-radius: 20px !important;
 }
 @media (max-width: 1024px) {
@@ -7062,7 +7072,7 @@ opacity: 1;
 }
 @media (max-width: 575px) {
   .nav-list-popup-repair {
-    min-width: 2840px;
+    /* min-width: 2840px; */
   }
 }
 @media (max-width: 575px) {
@@ -7810,6 +7820,12 @@ opacity: 1;
   );
   background: linear-gradient(90deg, #f48922 0%, #ffb015 100%);
 }
+
+.popup-repair-types-nav__item.button_o.active {
+
+  border: 3px solid #ffb015;
+}
+
 .active-item .formula-item__icon span {
   color: #ffffff;
 }
@@ -7833,10 +7849,17 @@ opacity: 1;
   fill: #b8a494;
 }
 .active-item .problems-item__icon {
-  width: 80px;
+  /* width: 80px;
   height: 80px;
   -webkit-box-shadow: 0 8px 40px rgba(254, 171, 23, 0.2);
-  box-shadow: 0 8px 40px rgba(254, 171, 23, 0.2);
+  box-shadow: 0 8px 40px rgba(254, 171, 23, 0.2); */
+  background: -webkit-gradient(linear,
+    left top,
+    right top,
+    from(#f48922),
+    to(#ffb015));
+  background: linear-gradient(90deg, #f48922 0%, #ffb015 100%);
+  color: #ffffff;
 }
 @media (max-width: 575px) {
   .active-item .problems-item__icon {
@@ -8331,8 +8354,9 @@ strong {
     display: none;
   }
   .mobile-row td:nth-child(5) {
-    width: 50%;
-    display: none;
+    width: 100%;
+    text-align: center;
+    /* display: none; */
   }
 }
 

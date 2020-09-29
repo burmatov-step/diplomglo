@@ -11,6 +11,7 @@ class SliderCaruselTab {
     width = 0,
     padding = 0,
     addap = 0,
+    addap2 = 0,
   }) {
     if (!main || !wrap) {
       console.warn('slider-carusel: Необходимо 2 свойства, "main" и "wrap"');
@@ -26,6 +27,7 @@ class SliderCaruselTab {
       padding,
       removes,
       addap,
+      addap2,
     };
   }
 
@@ -33,12 +35,11 @@ class SliderCaruselTab {
     this.addGloClass();
     this.render();
 
-    // console.dir(this.slides[this.slides.length - 1].clientWidth);
-    // console.dir(this.wrap);
+
     if (this.prev && this.next) {
       this.constolSlider();
     } else {
-      // this.addArrow();
+
       this.constolSlider();
     }
     if (this.responsive) {
@@ -47,7 +48,16 @@ class SliderCaruselTab {
   }
 
 render(){
+  if (innerWidth > 768) {
+    this.options.addap = 0;
+  }
   window.addEventListener("resize", () => {
+    if (innerWidth <= 768) {
+      this.options.addap = this.options.addap2;
+    }
+    if(innerWidth > 768){
+      this.options.addap = 0;
+    }
    this.options.width = 0;
    this.options.position = 0;
    this.wrap.style.transform = `translateX(${this.options.width}px)`;
@@ -65,8 +75,7 @@ render(){
   }
 
   constolSlider() {
-    // console.log(this.prev);
-    // console.log(this.next);
+
     this.prev.addEventListener("click", this.prevSlider.bind(this));
     this.next.addEventListener("click", this.nextSlider.bind(this));
   }
@@ -75,8 +84,7 @@ render(){
     this.options.position--;
     if (this.options.position < 0) {
       this.options.position = 0;
-      // this.prev.style.display = "none";
-      // this.next.style.display = "flex";
+
       return;
     }
     this.options.width +=
@@ -92,18 +100,15 @@ render(){
     let widthwr =
       (this.wrap.scrollWidth - this.main.offsetWidth) /
       this.slides[this.slides.length - 1].offsetWidth;
-      // console.log(Math.round(widthwr));
-      // console.dir(this.wrap)
-      // console.dir(this.main)
+
     if (this.options.position < Math.round(widthwr) - this.options.addap) {
       this.options.width -=
         (this.slides[this.options.position].offsetWidth + this.options.padding);
-        // console.log(this.options.width);
+
       this.wrap.style.transform = `translateX(${this.options.width}px)`;
       this.options.position++;
     }
-    // console.log(this.options.position + Math.round(widthwr));
-    // console.log(this.slides.length );
+
     if (
       this.options.removes &&
       this.options.position === Math.round(widthwr) - this.options.addap

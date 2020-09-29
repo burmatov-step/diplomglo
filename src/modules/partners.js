@@ -1,5 +1,6 @@
 import SliderCarusel from "./sliderFormula.js";
 
+
 const partners = () =>{
 const option = {
   main: ".partners > .wrapper",
@@ -7,12 +8,16 @@ const option = {
   slidesToShow: 3,
   next: "#partners-arrow_right",
   prev: "#partners-arrow_left",
-  infinity: true,
+  infinity: false,
   idStyle: "sliderCarousel-partner",
   indexx: 4,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1025,
+      slideToShow: 3,
+    },
+    {
+      breakpoint: 769,
       slideToShow: 2,
     },
     {

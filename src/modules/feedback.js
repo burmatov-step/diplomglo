@@ -8,7 +8,8 @@ const feedback = () => {
     close = popupPrivacy.querySelector(".close"),
     buttonHide = document.querySelectorAll(".button.button_wide"),
     popupConsultation = document.querySelector(".popup-consultation"),
-    popupThank = document.querySelector(".popup-thank");
+    popupThank = document.querySelector(".popup-thank"),
+    popName = document.querySelectorAll('[name="name"]');
 
 
   feedbackPhone.forEach((e) => {
@@ -29,6 +30,7 @@ const feedback = () => {
   linkPrivacy.forEach((item) => {
     item.addEventListener("click", () => {
       popupPrivacy.style.visibility = "visible";
+      document.documentElement.classList.add("overflov");
     });
   });
 
@@ -54,6 +56,13 @@ const feedback = () => {
 
 
 
+
+  popName.forEach((item) => {
+    item.addEventListener('input', (e) =>{
+e.target.value = e.target.value.match(/[а-яА-Я ]*/);
+    })
+  });
+
   formAll.forEach((item) => {
     // обработчик на форму
     item.addEventListener("submit", (e) => {
@@ -61,6 +70,9 @@ const feedback = () => {
       const check = e.target.querySelector("[type='checkbox']");
       const succs = () => {
         popupThank.style.visibility = 'visible';
+        setTimeout(() => {
+          popupThank.style.visibility = "hidden";
+        }, 4000);
       };
       if (check.checked) {
         const formData = new FormData(item);

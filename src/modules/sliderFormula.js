@@ -191,6 +191,7 @@ class SliderCarusel {
     };
 
     checkResponse();
+
      if (innerWidth >= this.options.deletes) {
        this.wrap.style.transform = `translateX(0%)`;
        this.options.position = 0;
@@ -201,6 +202,11 @@ class SliderCarusel {
 
 
     window.addEventListener("resize", () => {
+
+      this.options.position = 0;
+      this.options.widthSlide = Math.floor(100 / this.slidesToShow);
+      this.wrap.style.transform = `translateX(0%)`;
+
       checkResponse();
       if (innerWidth >= this.options.deletes) {
         this.wrap.style.transform = `translateX(0%)`;

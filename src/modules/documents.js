@@ -14,12 +14,7 @@ const option = {
   idStyle: "sliderCarousel-styles",
   deletes: 1091,
   indexx: 2,
-  // responsive: [
-  //   {
-  //     breakpoint: 1091,
-  //     slideToShow: 1,
-  //   },
-  // ],
+
 };
 
 const carousel = new SliderCarusel(option);
@@ -30,21 +25,14 @@ const carousel = new SliderCarusel(option);
 document.body.addEventListener('click', (e) =>{
    let target = e.target;
 if (target.closest(".transparency-item__img")) {
-
+document.documentElement.classList.add("overflov");
   docPopup.style.visibility = "visible";
 }
 if (target.closest(".popup-transparency .close")) {
   docPopup.style.visibility = "hidden";
 }
 })
-// window.addEventListener("resize", (e) => {
 
-//   if (innerWidth < 1091) {
-//     carousel.init();
-//   }
-
-
-// });
 
 const slider = (i = 1) => {
   let slide = document.querySelectorAll(`.popup-transparency-slider__slide`),

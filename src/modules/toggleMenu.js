@@ -6,15 +6,12 @@ const toggleMenu = () => {
       ".header-contacts__phone-number"
     ),
     headerContactsArrow = document.querySelector(".header-contacts__arrow"),
-    menuIcon = document.querySelector(".menu__icon"),
     popupDialogMenu = document.querySelector(".popup-dialog-menu"),
     blockSections = document.querySelectorAll(".block-sections"),
     popupRepairTypes = document.querySelector(".popup-repair-types"),
     popupMenu = document.querySelector(".popup-menu");
 
     popupMenu.style.opacity = "0";
-    let first = 645;
-    let second = 0;
   // Добавление номера
   const addNumber = () => {
     headPhoneNumAccordLink.style.opacity = "1";
@@ -55,7 +52,9 @@ const toggleMenu = () => {
       }
 
     // при клике на меню, выезжает меню
-    if (target === menuIcon) {
+    if (
+      target.closest(".menu__icon")
+    ) {
       popupMenu.style.visibility = "visible";
       popupDialogMenu.classList.add("open-menu-popup");
       popupMenu.style.opacity = "1";
