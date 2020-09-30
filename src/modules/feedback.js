@@ -66,6 +66,7 @@ e.target.value = e.target.value.match(/[а-яА-Я ]*/);
   formAll.forEach((item) => {
     // обработчик на форму
     item.addEventListener("submit", (e) => {
+   const input = item.querySelectorAll("input");
       e.preventDefault();
       const check = e.target.querySelector("[type='checkbox']");
       const succs = () => {
@@ -73,6 +74,7 @@ e.target.value = e.target.value.match(/[а-яА-Я ]*/);
         setTimeout(() => {
           popupThank.style.visibility = "hidden";
         }, 4000);
+
       };
       if (check.checked) {
         const formData = new FormData(item);
@@ -86,10 +88,15 @@ e.target.value = e.target.value.match(/[а-яА-Я ]*/);
               throw new Error("status network not 200");
             }
             succs();
+            input.forEach((e) => {
+              e.value = "";
+            });
           })
           .catch((error) => {
             console.log(error);
           });
+
+
       } else{
         const errorMess = document.createElement('div');
         errorMess.style.fontSize = "14px";
